@@ -82,13 +82,26 @@ struct Menu: View {
             List(dishes, id: \.self) { dish in
                 HStack {
                     Text("\(dish.title ?? "") - \(dish.itemDescription ?? "")")
-                            
-                    AsyncImage(url: URL(string: dish.image ?? "")) { image in
-                            image.resizable().scaledToFit().frame(width: 50, height: 50)
-                        } placeholder: {
-                            ProgressView()
-                        }
+                    
+                    if dish.id == 2 {
+                        Image("Lemon dessert")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                    } else if dish.id == 3 {
+                        Image("Grilled fish")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
                     }
+                    else {
+                        AsyncImage(url: URL(string: dish.image ?? "")) { image in
+                                image.resizable().scaledToFit().frame(width: 50, height: 50)
+                            } placeholder: {
+                                ProgressView()
+                            }
+                    }
+                }
             }
         }
         .onAppear {
