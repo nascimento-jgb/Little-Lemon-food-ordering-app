@@ -10,6 +10,7 @@ import SwiftUI
 let kFirstName: String = "first name key"
 let kLastName: String = "last name key"
 let kEmail: String = "email key"
+let kIsLoggedIn: String = "kIsLoggedIn"
 
 struct OnboardingView: View {
     
@@ -45,6 +46,8 @@ struct OnboardingView: View {
                     .padding(.vertical, 5)
                     .padding(.horizontal, 15)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textCase(.lowercase)
+                    
                 
                 Button(action: {
                     if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
@@ -53,7 +56,9 @@ struct OnboardingView: View {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
                             UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
+                            UserDefaults.standard.set(true, forKey: kIsLoggedIn)
                             isLoggedIn = true
+                           
                         } else {
                             isShowingAlert = true
                         }
@@ -76,6 +81,12 @@ struct OnboardingView: View {
                     message: Text("Please enter a valid email."),
                     dismissButton: .default(Text("OK"))
                 )}
+            
+            .onAppear{
+                if UserDefaults.standard.bool(forKey: kIsLoggedIn) {
+                    isLoggedIn = true
+                }
+            }
             
             .navigationDestination(isPresented: $isLoggedIn) {
                 Home().navigationBarBackButtonHidden(true)

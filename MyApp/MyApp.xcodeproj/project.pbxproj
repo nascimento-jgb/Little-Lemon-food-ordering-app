@@ -16,6 +16,7 @@
 		B998EEB52A7903A5002DCEC8 /* OnboardingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998EEB42A7903A5002DCEC8 /* OnboardingVIew.swift */; };
 		B998EEB72A79554F002DCEC8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998EEB62A79554F002DCEC8 /* Home.swift */; };
 		B998EEB92A7955C6002DCEC8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998EEB82A7955C6002DCEC8 /* Menu.swift */; };
+		B998EEBB2A796525002DCEC8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998EEBA2A796525002DCEC8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B998EEB42A7903A5002DCEC8 /* OnboardingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVIew.swift; sourceTree = "<group>"; };
 		B998EEB62A79554F002DCEC8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B998EEB82A7955C6002DCEC8 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		B998EEBA2A796525002DCEC8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				B998EEA72A77872A002DCEC8 /* Preview Content */,
 				B998EEB62A79554F002DCEC8 /* Home.swift */,
 				B998EEB82A7955C6002DCEC8 /* Menu.swift */,
+				B998EEBA2A796525002DCEC8 /* UserProfile.swift */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				B998EEAE2A77872A002DCEC8 /* MyApp.xcdatamodeld in Sources */,
 				B998EEB92A7955C6002DCEC8 /* Menu.swift in Sources */,
 				B998EEB52A7903A5002DCEC8 /* OnboardingVIew.swift in Sources */,
+				B998EEBB2A796525002DCEC8 /* UserProfile.swift in Sources */,
 				B998EEA42A778728002DCEC8 /* ContentView.swift in Sources */,
 				B998EEB72A79554F002DCEC8 /* Home.swift in Sources */,
 				B998EEA22A778728002DCEC8 /* MyAppApp.swift in Sources */,
