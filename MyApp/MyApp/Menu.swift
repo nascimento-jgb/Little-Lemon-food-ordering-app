@@ -10,7 +10,11 @@ import CoreData
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Dish.entity(), sortDescriptors: []) private var dishes: FetchedResults<Dish>
+
+    @FetchRequest(entity: Dish.entity(),
+                  sortDescriptors: [NSSortDescriptor(keyPath: \Dish.title, ascending: true)],
+                  animation: .default)
+    private var dishes: FetchedResults<Dish>
     
     func clearDatabase() {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Dish.fetchRequest()
@@ -70,31 +74,11 @@ struct Menu: View {
     }
     
     var body: some View {
-//        @FetchRequest(
-//                entity: Dish.entity(),
-//                sortDescriptors: [NSSortDescriptor(keyPath: \Dish.title, ascending: true)]
-//            ) var dishes: FetchedResults<Dish>
-        
         VStack{
             Text("Little Lemon Restaurant")
             Text("Helsinki")
             Text("Short description about the restaurant.")
             
-//            List {
-//                ForEach(dishes, id: \.self) { dish in
-//                    HStack{
-//                        Text(String(describing: "\(dish.title ?? "") - \(dish.itemDescription ?? "")"))
-//
-//                        if let dishImage = dish.image {
-//                            AsyncImage(url: URL(string: dishImage)) {image in
-//                                image.resizable().scaledToFit()
-//                            } placeholder: {
-//                                ProgressView()
-//                            }
-//                        }
-//                    }
-//                }
-//            }
             List(dishes, id: \.self) { dish in
                 HStack {
                     Text("\(dish.title ?? "") - \(dish.itemDescription ?? "")")
