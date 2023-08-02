@@ -45,8 +45,9 @@ struct OnboardingView: View {
                 TextField("Email:", text: $email)
                     .padding(.vertical, 5)
                     .padding(.horizontal, 15)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .textCase(.lowercase)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
                     
                 
                 Button(action: {

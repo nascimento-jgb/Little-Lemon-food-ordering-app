@@ -21,6 +21,7 @@
 		B9CA79062A7A7AC6005A2C9E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79052A7A7AC6005A2C9E /* MenuItem.swift */; };
 		B9CA79082A7A7AD4005A2C9E /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79072A7A7AD4005A2C9E /* MenuList.swift */; };
 		B9CA790A2A7A7B62005A2C9E /* CustomPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */; };
+		B9CA790D2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9CA790B2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B9CA79052A7A7AC6005A2C9E /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B9CA79072A7A7AD4005A2C9E /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPersistence.swift; path = ../../../../Downloads/KrOCQU2CTpmu1REIfryAvg_ae0cd909bf5e4e7db7525f835ddd50e1_CoreDataSupport/CustomPersistence.swift; sourceTree = "<group>"; };
+		B9CA790C2A7A8200005A2C9E /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				B998EEBA2A796525002DCEC8 /* UserProfile.swift */,
 				B9CA79022A7A7A8F005A2C9E /* FetchedObjects.swift */,
 				B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */,
+				B9CA790B2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				B9CA790A2A7A7B62005A2C9E /* CustomPersistence.swift in Sources */,
 				B9CA79082A7A7AD4005A2C9E /* MenuList.swift in Sources */,
 				B998EEA22A778728002DCEC8 /* MyAppApp.swift in Sources */,
+				B9CA790D2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +400,16 @@
 			);
 			currentVersion = B998EEAD2A77872A002DCEC8 /* MyApp.xcdatamodel */;
 			path = MyApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B9CA790B2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9CA790C2A7A8200005A2C9E /* ExampleDatabase.xcdatamodel */,
+			);
+			currentVersion = B9CA790C2A7A8200005A2C9E /* ExampleDatabase.xcdatamodel */;
+			path = ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
