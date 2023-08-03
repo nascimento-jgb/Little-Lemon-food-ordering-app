@@ -10,11 +10,58 @@ import CoreData
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(entity: Dish.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Dish.title, ascending: true)],
+                  sortDescriptors: [NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))],
                   animation: .default)
     private var dishes: FetchedResults<Dish>
+    
+    @State var searchText: String  = ""
+    
+    var body: some View {
+        VStack{
+            Text("Little Lemon Restaurant")
+            Text("Helsinki")
+            Text("Short description about the restaurant.")
+            
+            TextField("Search Menu", text: $searchText)
+                .padding(.horizontal, 20)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            List {
+                ForEach(dishes.filter { dish in
+                    searchText.isEmpty || dish.title?.localizedCaseInsensitiveContains(searchText) == true
+                }, id: \.self) { dish in
+                    HStack {
+                        Text("\(dish.title ?? "") - \(dish.itemDescription ?? "")")
+                        
+                        if dish.id == 2 {
+                            Image("Lemon dessert")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        } else if dish.id == 3 {
+                            Image("Grilled fish")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        }
+                        else {
+                            AsyncImage(url: URL(string: dish.image ?? "")) { image in
+                                image.resizable().scaledToFit().frame(width: 50, height: 50)
+                            } placeholder: {
+                                ProgressView()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear {
+            getMenuData()
+        }
+    }
     
     func clearDatabase() {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Dish.fetchRequest()
@@ -73,41 +120,13 @@ struct Menu: View {
         task.resume()
     }
     
-    var body: some View {
-        VStack{
-            Text("Little Lemon Restaurant")
-            Text("Helsinki")
-            Text("Short description about the restaurant.")
-            
-            List(dishes, id: \.self) { dish in
-                HStack {
-                    Text("\(dish.title ?? "") - \(dish.itemDescription ?? "")")
-                    
-                    if dish.id == 2 {
-                        Image("Lemon dessert")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                    } else if dish.id == 3 {
-                        Image("Grilled fish")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                    }
-                    else {
-                        AsyncImage(url: URL(string: dish.image ?? "")) { image in
-                                image.resizable().scaledToFit().frame(width: 50, height: 50)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                    }
-                }
-            }
+    func buildPredicate(searchText: String?) -> NSPredicate? {
+        guard let searchText = searchText, !searchText.isEmpty else {
+            return nil
         }
-        .onAppear {
-            getMenuData()
-        }
+        return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
     }
+    
 }
 
 struct Menu_Previews: PreviewProvider {
