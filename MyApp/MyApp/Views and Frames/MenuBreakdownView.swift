@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MenuBreakdownView: View {
+    @Binding var selectedCategory: String
+    
     var body: some View {
         VStack{
             
@@ -24,9 +26,9 @@ struct MenuBreakdownView: View {
             HStack{
                 
                 Button(action: {
-                    
+                        selectedCategory = "starters"
                     }){
-                        Text("Starters").font(.custom("MarkaziText-SemiBold", size: 22))
+                        Text("Starters").font(.custom("MarkaziText-SemiBold", size: 20))
                             .foregroundColor(.white)
                             .padding(10)
                             .background(Color(red: 73/255, green: 94/255, blue: 87/255))
@@ -35,9 +37,9 @@ struct MenuBreakdownView: View {
                     }//Button
                 
                 Button(action: {
-                    
+                        selectedCategory = "mains"
                     }){
-                        Text("Main").font(.custom("MarkaziText-SemiBold", size: 22))
+                        Text("Main").font(.custom("MarkaziText-SemiBold", size: 20))
                             .foregroundColor(.white)
                             .padding(10)
                             .background(Color(red: 73/255, green: 94/255, blue: 87/255))
@@ -46,9 +48,9 @@ struct MenuBreakdownView: View {
                     } //Button
                 
                 Button(action: {
-                    
+                        selectedCategory = "desserts"
                     }){
-                        Text("Desserts").font(.custom("MarkaziText-SemiBold", size: 22))
+                        Text("Desserts").font(.custom("MarkaziText-SemiBold", size: 20))
                             .foregroundColor(.white)
                             .padding(10)
                             .background(Color(red: 73/255, green: 94/255, blue: 87/255))
@@ -57,9 +59,9 @@ struct MenuBreakdownView: View {
                     } //Button
                 
                 Button(action: {
-                    
+                    selectedCategory = "drinks"
                     }){
-                        Text("Drinks").font(.custom("MarkaziText-SemiBold", size: 22))
+                        Text("Drinks").font(.custom("MarkaziText-SemiBold", size: 20))
                             .foregroundColor(.white)
                             .padding(10)
                             .background(Color(red: 73/255, green: 94/255, blue: 87/255))
@@ -75,6 +77,8 @@ struct MenuBreakdownView: View {
 
 struct MenuBreakdownView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuBreakdownView()
+        @State var selectedCategory: String = ""
+        MenuBreakdownView(selectedCategory: $selectedCategory)
     }
 }
+

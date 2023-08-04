@@ -14,7 +14,6 @@ struct Home: View {
     
     var body: some View {
         VStack {
-            
             HStack{
                 HeaderView()
             }
@@ -43,7 +42,10 @@ struct Home: View {
                         isHeroViewVisible = true
                     }
             }
+            .edgesIgnoringSafeArea(.top)
+            
         }
+//        .edgesIgnoringSafeArea(.top)
     }
 }
 

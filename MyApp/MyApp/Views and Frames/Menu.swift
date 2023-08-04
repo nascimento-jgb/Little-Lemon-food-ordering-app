@@ -10,18 +10,15 @@ import CoreData
 
 struct Menu: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
+    @State var searchText: String  = ""
+    @State private var selectedCategory = ""
     @FetchRequest(entity: Dish.entity(),
                   sortDescriptors: [NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))],
                   animation: .default)
     private var dishes: FetchedResults<Dish>
     
-    @State var searchText: String  = ""
-    
     var body: some View {
         VStack{
-            
-            
             
             TextField("Search Menu", text: $searchText)
                 .padding(.horizontal, 20)
@@ -35,16 +32,22 @@ struct Menu: View {
                             .padding(.leading, 8)
                         Spacer()
                     }
-                    )
+                )
             
-            MenuBreakdownView()
+            MenuBreakdownView(selectedCategory: $selectedCategory)
             
-        List {
+            List {
                 ForEach(dishes.filter { dish in
-                    searchText.isEmpty || dish.title?.localizedCaseInsensitiveContains(searchText) == true
+                    (searchText.isEmpty || dish.title?.localizedCaseInsensitiveContains(searchText) == true) && (selectedCategory.isEmpty || dish.category == selectedCategory)
                 }, id: \.self) { dish in
                     HStack {
-                        Text("\(dish.title ?? "") - \(dish.itemDescription ?? "")")
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(dish.title ?? "").font(.custom("MarkaziText-Bold", size: 20))
+                            Text(dish.itemDescription ?? "").font(.custom("MarkaziText-Regular", size: 15))
+                            Text("$ " + (dish.price ?? "") ).font(.custom("MarkaziText-SemiBold", size: 20))
+                        }
+                        
+                        Spacer()
                         
                         if dish.id == 2 {
                             Image("Lemon dessert")
