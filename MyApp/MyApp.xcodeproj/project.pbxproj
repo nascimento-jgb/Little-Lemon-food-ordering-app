@@ -22,6 +22,12 @@
 		B9CA79082A7A7AD4005A2C9E /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79072A7A7AD4005A2C9E /* MenuList.swift */; };
 		B9CA790A2A7A7B62005A2C9E /* CustomPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */; };
 		B9CA790D2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9CA790B2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld */; };
+		B9CA790F2A7B85C3005A2C9E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA790E2A7B85C3005A2C9E /* HeaderView.swift */; };
+		B9CA79112A7B8B9C005A2C9E /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA79102A7B8B9C005A2C9E /* HeroView.swift */; };
+		B9CA79262A7BF483005A2C9E /* markazi-text.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79252A7BF441005A2C9E /* markazi-text.bold.ttf */; };
+		B9CA79272A7BF483005A2C9E /* markazi-text.medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79222A7BF441005A2C9E /* markazi-text.medium.ttf */; };
+		B9CA79282A7BF483005A2C9E /* markazi-text.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79232A7BF441005A2C9E /* markazi-text.regular.ttf */; };
+		B9CA79292A7BF483005A2C9E /* markazi-text.semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79242A7BF441005A2C9E /* markazi-text.semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,13 @@
 		B9CA79072A7A7AD4005A2C9E /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPersistence.swift; path = ../../../../Downloads/KrOCQU2CTpmu1REIfryAvg_ae0cd909bf5e4e7db7525f835ddd50e1_CoreDataSupport/CustomPersistence.swift; sourceTree = "<group>"; };
 		B9CA790C2A7A8200005A2C9E /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		B9CA790E2A7B85C3005A2C9E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		B9CA79102A7B8B9C005A2C9E /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		B9CA79152A7BB9BD005A2C9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9CA79222A7BF441005A2C9E /* markazi-text.medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.medium.ttf"; sourceTree = "<group>"; };
+		B9CA79232A7BF441005A2C9E /* markazi-text.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.regular.ttf"; sourceTree = "<group>"; };
+		B9CA79242A7BF441005A2C9E /* markazi-text.semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.semibold.ttf"; sourceTree = "<group>"; };
+		B9CA79252A7BF441005A2C9E /* markazi-text.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,20 +86,18 @@
 		B998EEA02A778728002DCEC8 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9CA79172A7BF1B8005A2C9E /* Resources */,
+				B9CA79122A7B8BA9005A2C9E /* Views and Frames */,
 				B9CA79042A7A7AAC005A2C9E /* Structs */,
-				B998EEA12A778728002DCEC8 /* MyAppApp.swift */,
-				B998EEA32A778728002DCEC8 /* ContentView.swift */,
-				B998EEB42A7903A5002DCEC8 /* OnboardingVIew.swift */,
-				B998EEA52A77872A002DCEC8 /* Assets.xcassets */,
-				B998EEAA2A77872A002DCEC8 /* Persistence.swift */,
-				B998EEAC2A77872A002DCEC8 /* MyApp.xcdatamodeld */,
 				B998EEA72A77872A002DCEC8 /* Preview Content */,
-				B998EEB62A79554F002DCEC8 /* Home.swift */,
-				B998EEB82A7955C6002DCEC8 /* Menu.swift */,
-				B998EEBA2A796525002DCEC8 /* UserProfile.swift */,
 				B9CA79022A7A7A8F005A2C9E /* FetchedObjects.swift */,
+				B998EEA12A778728002DCEC8 /* MyAppApp.swift */,
+				B998EEAA2A77872A002DCEC8 /* Persistence.swift */,
 				B9CA79092A7A7B62005A2C9E /* CustomPersistence.swift */,
+				B9CA79152A7BB9BD005A2C9E /* Info.plist */,
+				B998EEA52A77872A002DCEC8 /* Assets.xcassets */,
 				B9CA790B2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld */,
+				B998EEAC2A77872A002DCEC8 /* MyApp.xcdatamodeld */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
@@ -106,6 +117,31 @@
 				B9CA79072A7A7AD4005A2C9E /* MenuList.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		B9CA79122A7B8BA9005A2C9E /* Views and Frames */ = {
+			isa = PBXGroup;
+			children = (
+				B998EEA32A778728002DCEC8 /* ContentView.swift */,
+				B998EEB42A7903A5002DCEC8 /* OnboardingVIew.swift */,
+				B9CA790E2A7B85C3005A2C9E /* HeaderView.swift */,
+				B9CA79102A7B8B9C005A2C9E /* HeroView.swift */,
+				B998EEB62A79554F002DCEC8 /* Home.swift */,
+				B998EEB82A7955C6002DCEC8 /* Menu.swift */,
+				B998EEBA2A796525002DCEC8 /* UserProfile.swift */,
+			);
+			path = "Views and Frames";
+			sourceTree = "<group>";
+		};
+		B9CA79172A7BF1B8005A2C9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9CA79252A7BF441005A2C9E /* markazi-text.bold.ttf */,
+				B9CA79222A7BF441005A2C9E /* markazi-text.medium.ttf */,
+				B9CA79232A7BF441005A2C9E /* markazi-text.regular.ttf */,
+				B9CA79242A7BF441005A2C9E /* markazi-text.semibold.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CA79262A7BF483005A2C9E /* markazi-text.bold.ttf in Resources */,
+				B9CA79272A7BF483005A2C9E /* markazi-text.medium.ttf in Resources */,
+				B9CA79282A7BF483005A2C9E /* markazi-text.regular.ttf in Resources */,
+				B9CA79292A7BF483005A2C9E /* markazi-text.semibold.ttf in Resources */,
 				B998EEA92A77872A002DCEC8 /* Preview Assets.xcassets in Resources */,
 				B998EEA62A77872A002DCEC8 /* Assets.xcassets in Resources */,
 			);
@@ -191,6 +231,8 @@
 				B9CA79082A7A7AD4005A2C9E /* MenuList.swift in Sources */,
 				B998EEA22A778728002DCEC8 /* MyAppApp.swift in Sources */,
 				B9CA790D2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld in Sources */,
+				B9CA790F2A7B85C3005A2C9E /* HeaderView.swift in Sources */,
+				B9CA79112A7B8B9C005A2C9E /* HeroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +364,9 @@
 				DEVELOPMENT_TEAM = KRPJJNJAQG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +396,9 @@
 				DEVELOPMENT_TEAM = KRPJJNJAQG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

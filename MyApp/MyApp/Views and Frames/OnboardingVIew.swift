@@ -25,31 +25,26 @@ struct OnboardingView: View {
         
         NavigationStack{
             VStack{
-                Image("Logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 360, height: 120)
-                    .padding()
+                HeaderView()
+                    .padding(.bottom, 5)
                 
-                Text("Welcome to Little Lemon App :)")
-                    .padding()
+                HeroView()
+                    .padding(.bottom, 15)
                 
-                TextField("First Name:", text: $firstName)
+                TextField("First Name: *", text: $firstName)
                     .padding(.vertical, 5)
                     .padding(.horizontal, 15)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Last Name:", text: $lastName)
+                TextField("Last Name: *", text: $lastName)
                     .padding(.vertical, 5)
                     .padding(.horizontal, 15)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Email:", text: $email)
+                TextField("Email: *", text: $email)
                     .padding(.vertical, 5)
                     .padding(.horizontal, 15)
                     .textCase(.lowercase)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    
-                
                 Button(action: {
                     if !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty {
                         

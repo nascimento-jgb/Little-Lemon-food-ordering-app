@@ -20,14 +20,20 @@ struct Menu: View {
     
     var body: some View {
         VStack{
-            Text("Little Lemon Restaurant")
-            Text("Helsinki")
-            Text("Short description about the restaurant.")
             
             TextField("Search Menu", text: $searchText)
                 .padding(.horizontal, 20)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+                .background(Color(red: 73/255, green: 94/255, blue: 87/255))
+                .overlay(
+                    HStack{
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.white)
+                            .padding(.leading, 8)
+                        Spacer()
+                    }
+                    )
             
             List {
                 ForEach(dishes.filter { dish in
@@ -126,7 +132,6 @@ struct Menu: View {
         }
         return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
     }
-    
 }
 
 struct Menu_Previews: PreviewProvider {
