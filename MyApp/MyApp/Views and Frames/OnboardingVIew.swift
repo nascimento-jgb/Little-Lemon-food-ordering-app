@@ -10,6 +10,7 @@ import SwiftUI
 let kFirstName: String = "first name key"
 let kLastName: String = "last name key"
 let kEmail: String = "email key"
+let kPhone: String = "phone key"
 let kIsLoggedIn: String = "kIsLoggedIn"
 
 struct OnboardingView: View {
@@ -17,6 +18,7 @@ struct OnboardingView: View {
     @State private var firstName: String = ""
     @State private var lastName: String = ""
     @State private var email: String = ""
+    @State private var phoneNum: String = ""
     
     @State private var isShowingAlert = false
     @State var isLoggedIn = false
@@ -52,6 +54,7 @@ struct OnboardingView: View {
                             UserDefaults.standard.set(firstName, forKey: kFirstName)
                             UserDefaults.standard.set(lastName, forKey: kLastName)
                             UserDefaults.standard.set(email, forKey: kEmail)
+                            UserDefaults.standard.set(phoneNum, forKey: kPhone)
                             UserDefaults.standard.set(true, forKey: kIsLoggedIn)
                             isLoggedIn = true
                            

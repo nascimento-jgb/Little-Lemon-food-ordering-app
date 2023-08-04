@@ -11,6 +11,7 @@ struct Home: View {
     let customPersistence = CustomPersistenceController.shared
     
     @State private var isHeroViewVisible = true
+    
     var body: some View {
         VStack {
             
