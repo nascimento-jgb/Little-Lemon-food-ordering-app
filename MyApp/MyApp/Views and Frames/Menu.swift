@@ -21,6 +21,8 @@ struct Menu: View {
     var body: some View {
         VStack{
             
+            
+            
             TextField("Search Menu", text: $searchText)
                 .padding(.horizontal, 20)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -35,7 +37,9 @@ struct Menu: View {
                     }
                     )
             
-            List {
+            MenuBreakdownView()
+            
+        List {
                 ForEach(dishes.filter { dish in
                     searchText.isEmpty || dish.title?.localizedCaseInsensitiveContains(searchText) == true
                 }, id: \.self) { dish in
@@ -63,6 +67,7 @@ struct Menu: View {
                     }
                 }
             }
+            .listStyle(.plain)
         }
         .onAppear {
             getMenuData()

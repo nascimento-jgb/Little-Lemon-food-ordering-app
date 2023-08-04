@@ -28,6 +28,7 @@
 		B9CA79272A7BF483005A2C9E /* markazi-text.medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79222A7BF441005A2C9E /* markazi-text.medium.ttf */; };
 		B9CA79282A7BF483005A2C9E /* markazi-text.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79232A7BF441005A2C9E /* markazi-text.regular.ttf */; };
 		B9CA79292A7BF483005A2C9E /* markazi-text.semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CA79242A7BF441005A2C9E /* markazi-text.semibold.ttf */; };
+		B9CA792D2A7D0B58005A2C9E /* MenuBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA792C2A7D0B58005A2C9E /* MenuBreakdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B9CA79232A7BF441005A2C9E /* markazi-text.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.regular.ttf"; sourceTree = "<group>"; };
 		B9CA79242A7BF441005A2C9E /* markazi-text.semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.semibold.ttf"; sourceTree = "<group>"; };
 		B9CA79252A7BF441005A2C9E /* markazi-text.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "markazi-text.bold.ttf"; sourceTree = "<group>"; };
+		B9CA792C2A7D0B58005A2C9E /* MenuBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBreakdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				B998EEB42A7903A5002DCEC8 /* OnboardingVIew.swift */,
 				B9CA790E2A7B85C3005A2C9E /* HeaderView.swift */,
 				B9CA79102A7B8B9C005A2C9E /* HeroView.swift */,
+				B9CA792C2A7D0B58005A2C9E /* MenuBreakdownView.swift */,
 				B998EEB62A79554F002DCEC8 /* Home.swift */,
 				B998EEB82A7955C6002DCEC8 /* Menu.swift */,
 				B998EEBA2A796525002DCEC8 /* UserProfile.swift */,
@@ -233,6 +236,7 @@
 				B9CA790D2A7A8200005A2C9E /* ExampleDatabase.xcdatamodeld in Sources */,
 				B9CA790F2A7B85C3005A2C9E /* HeaderView.swift in Sources */,
 				B9CA79112A7B8B9C005A2C9E /* HeroView.swift in Sources */,
+				B9CA792D2A7D0B58005A2C9E /* MenuBreakdownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

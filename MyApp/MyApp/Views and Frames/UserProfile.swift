@@ -26,7 +26,7 @@ struct UserProfile: View {
             
             HStack{
                 Text("Avatar").font(.custom("MarkaziText-SemiBold", size: 20))
-                    .padding(.leading, -150)
+                    .padding(.leading, -155)
                     .padding(.bottom, -20)
                     .foregroundColor(.gray)
             }
@@ -37,6 +37,8 @@ struct UserProfile: View {
                     .scaledToFit()
                     .frame(width: 100, height:100)
                     .padding()
+                
+                Spacer ()
                 
                 Button(action: {
                     
@@ -58,8 +60,8 @@ struct UserProfile: View {
                         .background(.white)
                         .cornerRadius(8)
                         .border(Color(red: 73/255, green: 94/255, blue: 87/255), width: 1)
-                        .padding()
-                } //Button
+                }//Button
+                Spacer()
             }
             .padding(.bottom, 25)
             
@@ -135,6 +137,12 @@ struct UserProfile: View {
                 } //Button
                 
         }
+//        .background(
+//                    Image("Background2")
+//                        .resizable()
+//                        .frame(width: 400, height: 400)
+//                        .edgesIgnoringSafeArea(.all)
+//                )
     }
 }
 
