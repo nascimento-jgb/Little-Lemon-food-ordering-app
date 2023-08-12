@@ -1,5 +1,5 @@
 # Little Lemon food ordering app
-The Little Lemon restaurant has discovered that their customers are frustrated that they can't easily order food online. They want to resolve this issue so that they can better plan staff and food supplies and not solely rely on customers in the restaurant for business. 
+The Little Lemon restaurant has discovered that customers are frustrated that they can't easily order food online. They want to resolve this issue to better plan staff and food supplies and not solely rely on customers in the restaurant for business. 
 
 ## Key Learnings:
 
@@ -18,11 +18,11 @@ The Little Lemon restaurant has discovered that their customers are frustrated t
 - Core Data
 - Custom Fonts
 
-## How to use?
+## How to use it?
   
   Open MyApp.xcodeproj file inside of MyApp folder.
   <br></br>
-  Then build and run the project when inside of the xCode environment to visualize the simulator.
+  Then build and run the project inside the Xcode environment to visualize the simulator.
   <br></br>
 
 ## Style Guide
